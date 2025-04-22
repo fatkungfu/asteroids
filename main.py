@@ -20,11 +20,14 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
+        # update the player
+        player.update(dt)
         # fill the screen with a color to wipe away anything from last frame
         screen.fill("black")
         player.draw(screen)
         # flip() the display to put your work on screen
         pygame.display.flip()
+
         # limit to 60 frames per second
         dt = clock.tick(60) / 1000
 
